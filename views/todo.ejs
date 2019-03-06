@@ -9,15 +9,16 @@
 </head>
 
 <body>
+    <h1>My ToDo list</h1>
     <div id="todo-table">
         <form action="/todo" method="Post" id="">
-            <input type="text" name="todo" placeholder="Add new event..." required>
+            <input type="text" name="item" placeholder="Add new event..." required>
             <button type="submit">Add Event</button>
         </form>
         <ul>
-            <li>wake up by 5am</li>
-            <li>Do Your morning prayer</li>
-            <li>Do your morning exercise</li>
+            <%  for (var i = 0; i < todos.length; i++){ %>
+                <li><%= todos[i].item %></li>
+            <% } %>
         </ul>
     </div>
 </body>
